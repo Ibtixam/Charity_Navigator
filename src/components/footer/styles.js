@@ -2,7 +2,10 @@ import styled from "styled-components";
 
 export const FooterWrapper = styled.div`
   background-color: #001936;
-  padding: 32px 63px 200px 63px;
+  padding: 32px 63px 100px;
+  @media only screen and (max-width: 400px) {
+    padding: 32px 50px 50px;
+  }
 
   .logo {
     width: 50%;
@@ -39,8 +42,8 @@ export const FooterWrapper = styled.div`
   }
 
   .secondpair p {
-    font-size: 22.2px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 500;
   }
 
   .interpair {
@@ -52,7 +55,7 @@ export const FooterWrapper = styled.div`
 
   .icon {
     display: flex;
-    gap: 40px;
+    gap: 30px;
   }
 
   .icon img {
@@ -61,9 +64,12 @@ export const FooterWrapper = styled.div`
     padding-bottom: 100px;
   }
 
-  span {
+  .copyright {
     color: white;
-    font-size: 20px;
+    font-size: 16px;
+    @media only screen and (max-width: 400px) {
+      font-size: 18px;
+    }
   }
 `;
 
@@ -75,12 +81,15 @@ export const Input = styled.input`
   border-radius: 10px;
   font-family: inherit;
   font-size: 18px;
+  @media only screen and (max-width: 400px) {
+    max-width: 60%;
+  }
 `;
 
 export const SubmitButton = styled.button`
   border: 0;
   outline: 0;
-  width: 35%;
+  width: 40%;
   background: #355ffe;
   color: #fff;
   font-family: inherit;
@@ -95,8 +104,8 @@ export const SubmitButton = styled.button`
     opacity: 0.5;
   }
   @media only screen and (max-width: 400px) {
-    width: 100%;
-    font-size: 12px;
+    width: 60%;
+    font-size: 18px;
   }
 `;
 
@@ -108,7 +117,8 @@ export const InputWrapper = styled.div`
     grid-column: 1 / -1; /* Span from first to last column */
   }
   @media only screen and (max-width: 1000px) {
-    grid-template-rows: repeat(2, max);
+    grid-template-rows: repeat(1, max);
+    grid-template-columns: repeat(2, auto);
     grid-template-columns: none;
   }
 `;

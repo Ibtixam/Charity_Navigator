@@ -57,7 +57,9 @@ const Footer = () => {
             <img src={youtubeIcon} alt="YouTube" />
             <img src={linkedinIcon} alt="LinkedIn" />
           </div>
-          <span>Copyright 2023 | EIN 13-418824 | Bridge ID 3108588923</span>
+          <p className="copyright">
+            &copy; Copyright 2023 | EIN 13-418824 | Bridge ID 3108588923
+          </p>
         </div>
       </div>
     </FooterWrapper>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  width: 100%;
+  max-width: 100%;
   ul {
     display: flex;
     justify-content: flex-start;
@@ -33,7 +33,7 @@ export const Wrapper = styled.div`
 `;
 
 export const TitleWrapper = styled.div`
-  width: 100%;
+  /* width: 100%; */
   padding-top: 40px;
   p {
     text-align: center;
@@ -59,8 +59,7 @@ export const TitleWrapper = styled.div`
 `;
 
 export const TextContainer = styled.div`
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
   background-color: #f7f5f3;
   display: flex;
   justify-content: center;
@@ -71,13 +70,13 @@ export const TextContainer = styled.div`
   }
   @media only screen and (max-width: 1000px) {
     .text-wrapper {
-      padding: 60px 60px;
+      padding: 20px 35px;
     }
   }
 `;
 
 export const Paragraph = styled.p`
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   text-decoration: none;
   margin-bottom: 50px;
