@@ -76,10 +76,13 @@ export const TextContainer = styled.div`
 `;
 
 export const Paragraph = styled.p`
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
   text-decoration: none;
   margin-bottom: 50px;
+  @media only screen and (max-width: 400px) {
+    font-size: 16px;
+  }
 `;
 
 export const SocailWrapper = styled.div`
