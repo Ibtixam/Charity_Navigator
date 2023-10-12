@@ -46,7 +46,7 @@ export const Navbar = styled.div`
   position: relative;
   background: #fff;
   img {
-    width: 100px;
+    width: 340px;
     margin-left: 25px;
   }
   @media only screen and (max-width: 1000px) {
