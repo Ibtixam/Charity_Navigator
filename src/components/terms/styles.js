@@ -66,6 +66,10 @@ export const TextContainer = styled.div`
   margin-top: 40px;
   .text-wrapper {
     padding: 60px 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   @media only screen and (max-width: 1000px) {
     .text-wrapper {
@@ -111,7 +115,6 @@ export const Input = styled.input`
   border-radius: 12px;
   font-family: inherit;
   font-size: 18px;
-  max-width: 400px;
   &:focus {
     border: 2px solid #4870fe;
   }
@@ -120,4 +123,38 @@ export const Input = styled.input`
 export const InputWrapper = styled.div`
   display: grid;
   gap: 10px;
+  grid-template-columns: repeat(2, auto);
+  > :last-child {
+    grid-column: 1 / -1; /* Span from first to last column */
+  }
+  @media only screen and (max-width: 1000px) {
+    grid-template-rows: repeat(1, max);
+    grid-template-columns: repeat(2, auto);
+    grid-template-columns: none;
+  }
+`;
+
+export const FormContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background: white;
+  padding: 50px 70px;
+  max-width: 100%;
+  border-radius: 10px;
+  border: 2px solid #e6e6e6;
+  @media screen and (max-width: 450px) {
+    padding: 50px 20px;
+  }
+`;
+
+export const FormTitle = styled.h3`
+  text-align: center;
+  color: #001936;
+  font-size: 22px;
+  margin: 20px 0;
+  @media screen and (max-width: 450px) {
+    font-size: 18px;
+  }
 `;

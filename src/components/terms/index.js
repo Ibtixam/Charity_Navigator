@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   TextContainer,
   TitleWrapper,
@@ -8,9 +8,25 @@ import {
   SubmitButton,
   InputWrapper,
   Input,
+  FormTitle,
+  FormContainer,
 } from "./styles";
 
 const Terms = () => {
+  const [value, setValue] = useState({
+    fullName: "",
+    einnumber: "",
+    title: "",
+    email: "",
+  });
+
+  const handleChange = (e) => {
+    const { value, name } = e.target;
+    setValue((prev) => {
+      return { ...prev, [name]: value };
+    });
+  };
+
   return (
     <Wrapper>
       <ul>
@@ -78,16 +94,48 @@ const Terms = () => {
             Navigator's "Giving Basket" functionality as it may exist from time
             to time.
           </Paragraph>
-          <InputWrapper>
-            <Input type="text" placeholder="First Name" />
-            <Input type="text" placeholder="Last Name" />
-            <Input type="text" placeholder="Email Address" />
-          </InputWrapper>
-          <div style={{ marginTop: "30px" }}>
-            <input type="checkbox" />
-            <label> I agree and accept Terms</label>
-          </div>
-          <SubmitButton>Accept Terms</SubmitButton>
+          <FormContainer>
+            <FormTitle>EIN of charity</FormTitle>
+            <Input
+              type="text"
+              name="einnumber"
+              placeholder="EIN number"
+              value={value?.einnumber}
+              style={{ width: "92%" }}
+              onChange={handleChange}
+            />
+            <FormTitle>Fundraiser Head Information</FormTitle>
+            <InputWrapper>
+              <Input
+                type="text"
+                name="fullName"
+                placeholder="Full Name"
+                value={value?.fullName}
+                onChange={handleChange}
+              />
+              <Input
+                type="text"
+                name="title"
+                value={value?.title}
+                onChange={handleChange}
+                placeholder="Title"
+              />
+              <Input
+                type="text"
+                name="email"
+                value={value?.email}
+                onChange={handleChange}
+                placeholder="Email Address"
+              />
+            </InputWrapper>
+            <div style={{ marginTop: "20px" }}>
+              <input type="checkbox" name="agreeTerms" />
+              <label> I agree and accept Terms</label>
+            </div>
+            <SubmitButton onClick={() => console.log(value)}>
+              Accept Terms
+            </SubmitButton>
+          </FormContainer>
         </div>
       </TextContainer>
     </Wrapper>
