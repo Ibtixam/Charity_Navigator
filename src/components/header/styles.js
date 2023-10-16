@@ -50,9 +50,10 @@ export const Navbar = styled.div`
     margin-left: 25px;
   }
   @media only screen and (max-width: 1000px) {
-    img{
+    img {
       width: 250px;
     }
+    height: 80px;
   }
 `;
 

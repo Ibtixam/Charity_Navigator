@@ -8,28 +8,34 @@ import twitterIcon from "../../assets/twitter.png";
 import instagramIcon from "../../assets/instagram.png";
 import youtubeIcon from "../../assets/youtube.png";
 import linkedinIcon from "../../assets/linkedin.png";
-import { FooterWrapper, Input, InputWrapper, SubmitButton } from "./styles";
+import {
+  FooterContainer,
+  FooterText,
+  FooterWrapper,
+  Input,
+  InputWrapper,
+  SubmitButton,
+} from "./styles";
 
 const Footer = () => {
   return (
     <FooterWrapper>
-      <div className="container">
+      <FooterContainer>
         <div className="firstpair">
           <img className="logo" src={charityNavLogo} alt="CharityNav Logo" />
-          <p>
+          <FooterText>
             299 Market Street, Suite 250 <br /> Saddle Brook, NJ 07663
-          </p>
+          </FooterText>
           <div className="threeimg">
             <img className="star" src={starBadge} alt="Star Badge" />
             <img className="bbb" src={bbbLogo} alt="BBB Logo" />
             <img className="seal" src={candidSeal} alt="Candid Seal" />
           </div>
         </div>
-
         <div className="secondpair">
-          <p style={{ marginBottom: "15px" }}>
+          <FooterText style={{ marginBottom: "15px" }}>
             Sign up for donor tips and resources
-          </p>
+          </FooterText>
           <InputWrapper>
             <Input type="text" placeholder="First Name" />
             <Input type="text" placeholder="Last Name" />
@@ -38,16 +44,16 @@ const Footer = () => {
           <SubmitButton>Sign Up Now</SubmitButton>
           <div className="interpair">
             <div className="pra">
-              <p>Press Room</p>
-              <p>Financials and Policies</p>
-              <p>Privacy Policy</p>
-              <p>Teams of Use </p>
+              <FooterText>Press Room</FooterText>
+              <FooterText>Financials and Policies</FooterText>
+              <FooterText>Privacy Policy</FooterText>
+              <FooterText>Teams of Use </FooterText>
             </div>
 
             <div className="pra">
-              <p>FAQs/Contant Us</p>
-              <p>Careers</p>
-              <p>API</p>
+              <FooterText>FAQs/Contant Us</FooterText>
+              <FooterText>Careers</FooterText>
+              <FooterText>API</FooterText>
             </div>
           </div>
           <div className="icon">
@@ -61,7 +67,7 @@ const Footer = () => {
             &copy; Copyright 2023 | EIN 13-418824 | Bridge ID 3108588923
           </p>
         </div>
-      </div>
+      </FooterContainer>
     </FooterWrapper>
   );
 };

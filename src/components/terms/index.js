@@ -6,6 +6,8 @@ import {
   Paragraph,
   SocailWrapper,
   SubmitButton,
+  InputWrapper,
+  Input,
 } from "./styles";
 
 const Terms = () => {
@@ -76,8 +78,16 @@ const Terms = () => {
             Navigator's "Giving Basket" functionality as it may exist from time
             to time.
           </Paragraph>
-          <Paragraph>I agree and accept Terms</Paragraph>
-          <SubmitButton>Terms & Conditions</SubmitButton>
+          <InputWrapper>
+            <Input type="text" placeholder="First Name" />
+            <Input type="text" placeholder="Last Name" />
+            <Input type="text" placeholder="Email Address" />
+          </InputWrapper>
+          <div style={{ marginTop: "30px" }}>
+            <input type="checkbox" />
+            <label> I agree and accept Terms</label>
+          </div>
+          <SubmitButton>Accept Terms</SubmitButton>
         </div>
       </TextContainer>
     </Wrapper>

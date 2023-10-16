@@ -23,22 +23,8 @@ export const FooterWrapper = styled.div`
     padding-left: 32px;
   }
 
-  .container p {
-    font-size: 20px;
-    padding-top: 24px;
-    color: white;
-  }
-
   .threeimg img {
     padding-top: 70px;
-  }
-
-  .container {
-    display: flex;
-    justify-content: flex-start;
-    @media only screen and (max-width: 1000px) {
-      flex-direction: column;
-    }
   }
 
   .secondpair p {
@@ -60,29 +46,48 @@ export const FooterWrapper = styled.div`
 
   .icon img {
     height: 28px;
-    padding-top: 30px;
-    padding-bottom: 100px;
+    padding: 50px 0;
   }
 
   .copyright {
     color: white;
     font-size: 16px;
-    @media only screen and (max-width: 400px) {
-      font-size: 18px;
+  }
+  @media only screen and (max-width: 500px) {
+    .interpair {
+      gap: 0;
     }
   }
 `;
 
+export const FooterContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  @media only screen and (max-width: 1000px) {
+    flex-direction: column;
+  }
+`;
+
+export const FooterText = styled.div`
+  font-size: 20px;
+  padding-top: 24px;
+  color: white;
+`;
+
 export const Input = styled.input`
-  border: 0;
+  border: 2px solid transparent;
   outline: 0;
   background: #fff;
   padding: 12px 20px;
-  border-radius: 10px;
+  border-radius: 12px;
   font-family: inherit;
   font-size: 18px;
   @media only screen and (max-width: 400px) {
-    max-width: 60%;
+    max-width: 400px;
+  }
+  &:focus {
+    border: 2px solid #4870fe;
   }
 `;
 

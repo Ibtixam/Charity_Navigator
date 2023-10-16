@@ -42,19 +42,18 @@ export const TitleWrapper = styled.div`
     font-size: 65px;
     font-weight: 800;
   }
-  @media only screen and (max-width: 1000px) {
-    .title {
-      font-size: 40px;
-    }
-    .update {
-      font-size: 14px;
-    }
-  }
-
   .update {
     font-size: 20px;
     font-weight: 500;
     margin-top: 8px;
+  }
+  @media only screen and (max-width: 1000px) {
+    .title {
+      font-size: 35px;
+    }
+    .update {
+      font-size: 15px;
+    }
   }
 `;
 
@@ -97,9 +96,28 @@ export const SubmitButton = styled.button`
   color: #fff;
   font-family: inherit;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 18px;
   padding: 12px 20px;
   border-radius: 10px;
   margin-top: 20px;
   cursor: pointer;
+`;
+
+export const Input = styled.input`
+  border: 2px solid #e6e6e6;
+  outline: 0;
+  background: #fff;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 18px;
+  max-width: 400px;
+  &:focus {
+    border: 2px solid #4870fe;
+  }
+`;
+
+export const InputWrapper = styled.div`
+  display: grid;
+  gap: 10px;
 `;
