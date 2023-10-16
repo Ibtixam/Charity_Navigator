@@ -96,34 +96,35 @@ const Terms = () => {
           </Paragraph>
           <FormContainer>
             <FormTitle>EIN of charity</FormTitle>
-            <Input
-              type="text"
-              name="einnumber"
-              placeholder="EIN number"
-              value={value?.einnumber}
-              style={{ width: "92%" }}
-              onChange={handleChange}
-            />
+            <InputWrapper>
+              <Input
+                type="text"
+                name="einnumber"
+                placeholder="EIN number"
+                value={value.einnumber}
+                onChange={handleChange}
+              />
+            </InputWrapper>
             <FormTitle>Fundraiser Head Information</FormTitle>
             <InputWrapper>
               <Input
                 type="text"
                 name="fullName"
                 placeholder="Full Name"
-                value={value?.fullName}
+                value={value.fullName}
                 onChange={handleChange}
               />
               <Input
                 type="text"
                 name="title"
-                value={value?.title}
+                value={value.title}
                 onChange={handleChange}
                 placeholder="Title"
               />
               <Input
                 type="text"
                 name="email"
-                value={value?.email}
+                value={value.email}
                 onChange={handleChange}
                 placeholder="Email Address"
               />

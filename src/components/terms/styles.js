@@ -124,13 +124,12 @@ export const InputWrapper = styled.div`
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(2, auto);
+  width: 100%;
   > :last-child {
-    grid-column: 1 / -1; /* Span from first to last column */
+    grid-column: 1 / -1;
   }
   @media only screen and (max-width: 1000px) {
-    grid-template-rows: repeat(1, max);
-    grid-template-columns: repeat(2, auto);
-    grid-template-columns: none;
+    grid-template-columns: repeat(1, auto);
   }
 `;
 
