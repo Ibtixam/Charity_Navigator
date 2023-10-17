@@ -11,20 +11,20 @@ import {
   FormTitle,
   FormContainer,
 } from "./styles";
+import { SharedAPI } from "../../lib/shared.api";
 
 const Terms = () => {
-  const [value, setValue] = useState({
-    fullName: "",
-    einnumber: "",
-    title: "",
-    email: "",
-  });
+  const [charityEntry, setCharityEntry] = useState({});
 
   const handleChange = (e) => {
     const { value, name } = e.target;
-    setValue((prev) => {
+    setCharityEntry((prev) => {
       return { ...prev, [name]: value };
     });
+  };
+
+  const addEntrires = async () => {
+    await SharedAPI.addCharitiesEntry(charityEntry);
   };
 
   return (
@@ -99,9 +99,9 @@ const Terms = () => {
             <InputWrapper>
               <Input
                 type="text"
-                name="einnumber"
+                name="einNumber"
                 placeholder="EIN number"
-                value={value.einnumber}
+                value={charityEntry.einNumber}
                 onChange={handleChange}
               />
             </InputWrapper>
@@ -111,20 +111,20 @@ const Terms = () => {
                 type="text"
                 name="fullName"
                 placeholder="Full Name"
-                value={value.fullName}
+                value={charityEntry.fullName}
                 onChange={handleChange}
               />
               <Input
                 type="text"
                 name="title"
-                value={value.title}
+                value={charityEntry.title}
                 onChange={handleChange}
                 placeholder="Title"
               />
               <Input
                 type="text"
                 name="email"
-                value={value.email}
+                value={charityEntry.email}
                 onChange={handleChange}
                 placeholder="Email Address"
               />
@@ -133,7 +133,7 @@ const Terms = () => {
               <input type="checkbox" name="agreeTerms" />
               <label> I agree and accept Terms</label>
             </div>
-            <SubmitButton onClick={() => console.log(value)}>
+            <SubmitButton onClick={() => addEntrires()}>
               Accept Terms
             </SubmitButton>
           </FormContainer>

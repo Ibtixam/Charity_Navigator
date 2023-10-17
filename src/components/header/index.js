@@ -25,7 +25,13 @@ const header = () => {
         </SvgWrapper>
       </Header>
       <Navbar>
-        <img src={Logo} alt="Logo" />
+        <img
+          src={Logo}
+          alt="Logo"
+          onClick={() => {
+            window.location = "/";
+          }}
+        />
         <InputWrapper>
           <input type="text" placeholder="Search by Charity or Cause" />
           <SearchButton>
@@ -33,7 +39,13 @@ const header = () => {
           </SearchButton>
         </InputWrapper>
         <LinkWrapper>
-          <Link>Discover Charities</Link>
+          <Link
+            onClick={() => {
+              window.location = "/entries";
+            }}
+          >
+            Discover Charities
+          </Link>
           <Link>Donor Basics</Link>
           <Link>About Us</Link>
         </LinkWrapper>
