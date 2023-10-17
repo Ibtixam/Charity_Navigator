@@ -1,7 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Table, TableData, TableHeading } from "./styles";
 
 const Entries = () => {
+  const FetchData = async () => {
+    const url = "http://localhost:4000/charity/index";
+    try {
+      const response = await fetch(url, {
+        method: "POST",
+      });
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    FetchData();
+  }, []);
+
   return (
     <Table>
       <tr>
@@ -13,7 +33,7 @@ const Entries = () => {
       </tr>
       <tr>
         <TableData>9886123</TableData>
-        <TableData>muhammad Ibtisam</TableData>
+        <TableData>Muhammad Ibtisam</TableData>
         <TableData>React JS Developer</TableData>
         <TableData>m.ibtisam868@gmail.com</TableData>
         <TableData>Yes</TableData>

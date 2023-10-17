@@ -27,6 +27,22 @@ const Terms = () => {
     });
   };
 
+  const AddCharity = async () => {
+    const url = "http://localhost:4000/charity/addCharity";
+    try {
+      const response = await fetch(url, {
+        method: "GET",
+      });
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+
   return (
     <Wrapper>
       <ul>
@@ -133,9 +149,7 @@ const Terms = () => {
               <input type="checkbox" name="agreeTerms" />
               <label> I agree and accept Terms</label>
             </div>
-            <SubmitButton onClick={() => console.log(value)}>
-              Accept Terms
-            </SubmitButton>
+            <SubmitButton onClick={AddCharity}>Accept Terms</SubmitButton>
           </FormContainer>
         </div>
       </TextContainer>
