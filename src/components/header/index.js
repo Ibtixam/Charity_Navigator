@@ -8,6 +8,7 @@ import {
   SearchButton,
   LinkWrapper,
   SvgWrapper,
+  SiteName,
 } from "./styles";
 import { CartSvg, SearchSvg } from "../../assets";
 import { NavLink } from "react-router-dom";
@@ -24,13 +25,9 @@ const header = () => {
         </SvgWrapper>
       </Header>
       <Navbar>
-        <h2
-          onClick={() => {
-            window.location = "/";
-          }}
-        >
-          TGCC
-        </h2>
+        <NavLink to="/">
+          <SiteName>TGCC</SiteName>
+        </NavLink>
         <InputWrapper>
           <input type="text" placeholder="Search by Charity or Cause" />
           <SearchButton>

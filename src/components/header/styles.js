@@ -20,9 +20,7 @@ export const Text = styled.p`
   font-size: 18px;
   font-weight: 600;
   color: #fff;
-  margin-right: 30px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin: 15px 30px 15px 0;
 `;
 
 export const SvgWrapper = styled.div`
@@ -45,16 +43,17 @@ export const Navbar = styled.div`
   box-shadow: 0 3px 10px -3px #b8b8b8;
   position: relative;
   background: #fff;
-  img {
-    width: 340px;
-    margin-left: 25px;
-  }
   @media only screen and (max-width: 1000px) {
-    img {
-      width: 250px;
-    }
     height: 80px;
   }
+  a {
+    text-decoration: none;
+  }
+`;
+
+export const SiteName = styled.h2`
+  color: #001936;
+  margin-left: 12px;
 `;
 
 export const InputWrapper = styled.div`
@@ -100,8 +99,7 @@ export const LinkWrapper = styled.div`
     display: none;
   }
   a {
-    text-decoration: none;
-    color: black;
+    color: #001936;
     font-size: 18px;
   }
 `;

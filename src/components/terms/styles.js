@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  max-width: 100%;
+  width: 100%;
   ul {
     display: flex;
     justify-content: flex-start;
@@ -115,6 +115,7 @@ export const Input = styled.input`
   border-radius: 12px;
   font-family: inherit;
   font-size: 18px;
+  width: inherit;
   &:focus {
     border: 2px solid #4870fe;
   }
@@ -129,6 +130,7 @@ export const InputWrapper = styled.div`
     grid-column: 1 / -1;
   }
   @media only screen and (max-width: 1000px) {
+    width: 90%;
     grid-template-columns: repeat(1, auto);
   }
 `;
@@ -140,10 +142,10 @@ export const FormContainer = styled.div`
   flex-direction: column;
   background: white;
   padding: 50px 70px;
-  max-width: 100%;
   border-radius: 10px;
   border: 2px solid #e6e6e6;
   @media screen and (max-width: 450px) {
+    width: 90%;
     padding: 50px 20px;
   }
 `;

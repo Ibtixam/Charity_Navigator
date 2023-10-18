@@ -1,5 +1,4 @@
 import React from "react";
-import charityNavLogo from "../../assets/charitynav-logo-stack-white.svg";
 import starBadge from "../../assets/four-star-rating-badge--1-.svg";
 import bbbLogo from "../../assets/ac-s-cmyk-h-reversedwhite-w-url-01.svg";
 import candidSeal from "../../assets/candid-seal-platinum-2023.png";
@@ -14,15 +13,19 @@ import {
   FooterWrapper,
   Input,
   InputWrapper,
+  SiteName,
   SubmitButton,
 } from "./styles";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
     <FooterWrapper>
       <FooterContainer>
         <div className="firstpair">
-          <img className="logo" src={charityNavLogo} alt="CharityNav Logo" />
+          <NavLink to="/" style={{ textDecoration: "none" }}>
+            <SiteName>TGCC</SiteName>
+          </NavLink>{" "}
           <FooterText>
             299 Market Street, Suite 250 <br /> Saddle Brook, NJ 07663
           </FooterText>

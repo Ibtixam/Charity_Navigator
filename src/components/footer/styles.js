@@ -83,9 +83,7 @@ export const Input = styled.input`
   border-radius: 12px;
   font-family: inherit;
   font-size: 18px;
-  @media only screen and (max-width: 400px) {
-    max-width: 400px;
-  }
+  width: inherit;
   &:focus {
     border: 2px solid #4870fe;
   }
@@ -117,6 +115,7 @@ export const SubmitButton = styled.button`
 export const InputWrapper = styled.div`
   display: grid;
   gap: 10px;
+  width: 100%;
   grid-template-columns: repeat(2, auto);
   > :last-child {
     grid-column: 1 / -1; /* Span from first to last column */
@@ -125,5 +124,15 @@ export const InputWrapper = styled.div`
     grid-template-rows: repeat(1, max);
     grid-template-columns: repeat(2, auto);
     grid-template-columns: none;
+    width: 90%;
+  }
+`;
+
+export const SiteName = styled.h2`
+  color: #fff;
+  font-size: 60px;
+  margin-top: 20px;
+  @media screen and (max-width: 480px) {
+    font-size: 45px;
   }
 `;
