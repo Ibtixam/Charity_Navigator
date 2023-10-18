@@ -1,7 +1,9 @@
 import axios from "axios";
 
+const apiLinkUrl = process.env.BACK_END_API_URL || 'https://f85e-2400-adc5-42b-1700-90e0-b3b1-484e-addd.ngrok-free.app';
+
 const getEntriesData = async () => {
-  const apiLink = "http://localhost:4000/charity/index";
+  const apiLink = `${apiLinkUrl}/charity/index`;
 
   var config = {
     method: "get",
@@ -17,7 +19,7 @@ const getEntriesData = async () => {
 };
 
 const addCharitiesEntry = async (payload) => {
-  const apiLink = "http://localhost:4000/charity/addCharity";
+  const apiLink = `${apiLinkUrl}/charity/addCharity`;
   var config = {
     method: "POST",
     url: apiLink,
@@ -33,7 +35,7 @@ const addCharitiesEntry = async (payload) => {
 };
 
 const updateCharitiesStatus = async (payload) => {
-  const apiLink = "http://localhost:4000/charity/changeApproval";
+  const apiLink = `${apiLinkUrl}/charity/changeApproval`;
   var config = {
     method: "PUT",
     url: apiLink,

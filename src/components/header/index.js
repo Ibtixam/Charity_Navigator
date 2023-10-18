@@ -25,13 +25,13 @@ const header = () => {
         </SvgWrapper>
       </Header>
       <Navbar>
-        <img
-          src={Logo}
-          alt="Logo"
+        <h2
           onClick={() => {
             window.location = "/";
           }}
-        />
+        >
+          TGCC
+        </h2>
         <InputWrapper>
           <input type="text" placeholder="Search by Charity or Cause" />
           <SearchButton>
