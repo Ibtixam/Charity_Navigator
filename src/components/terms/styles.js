@@ -65,7 +65,7 @@ export const TextContainer = styled.div`
   align-items: center;
   margin-top: 40px;
   .text-wrapper {
-    padding: 60px 250px;
+    padding: 60px 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -73,7 +73,7 @@ export const TextContainer = styled.div`
   }
   @media only screen and (max-width: 1000px) {
     .text-wrapper {
-      padding: 20px 35px;
+      padding: 20px 30px;
     }
   }
 `;
