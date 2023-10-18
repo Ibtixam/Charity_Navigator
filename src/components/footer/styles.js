@@ -115,7 +115,6 @@ export const SubmitButton = styled.button`
 export const InputWrapper = styled.div`
   display: grid;
   gap: 10px;
-  width: 100%;
   grid-template-columns: repeat(2, auto);
   > :last-child {
     grid-column: 1 / -1; /* Span from first to last column */
