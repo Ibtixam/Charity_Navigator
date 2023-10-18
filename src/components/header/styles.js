@@ -99,11 +99,9 @@ export const LinkWrapper = styled.div`
   @media only screen and (max-width: 1000px) {
     display: none;
   }
-`;
-
-export const Link = styled.a`
-  color: #001936;
-  font-size: 18px !important;
-  font-weight: 600;
-  text-decoration: none;
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+  }
 `;

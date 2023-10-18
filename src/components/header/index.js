@@ -8,10 +8,10 @@ import {
   Text,
   SearchButton,
   LinkWrapper,
-  Link,
   SvgWrapper,
 } from "./styles";
 import { CartSvg, SearchSvg } from "../../assets";
+import { NavLink } from "react-router-dom";
 
 const header = () => {
   return (
@@ -39,15 +39,9 @@ const header = () => {
           </SearchButton>
         </InputWrapper>
         <LinkWrapper>
-          <Link
-            onClick={() => {
-              window.location = "/entries";
-            }}
-          >
-            Discover Charities
-          </Link>
-          <Link>Donor Basics</Link>
-          <Link>About Us</Link>
+          <NavLink to="/entries">Discover Charities</NavLink>
+          <NavLink>Donor Basics</NavLink>
+          <NavLink>About Us</NavLink>
         </LinkWrapper>
       </Navbar>
     </HeaderWrapper>
