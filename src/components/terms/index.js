@@ -4,7 +4,6 @@ import {
   TitleWrapper,
   Wrapper,
   Paragraph,
-  SocailWrapper,
   SubmitButton,
   InputWrapper,
   Input,
@@ -15,6 +14,7 @@ import { SharedAPI } from "../../lib/shared.api";
 
 const Terms = () => {
   const [charityEntry, setCharityEntry] = useState({});
+  const [checked, setchecked] = useState(false);
 
   const handleChange = (e) => {
     const { value, name } = e.target;
@@ -27,21 +27,16 @@ const Terms = () => {
     await SharedAPI.addCharitiesEntry(charityEntry);
   };
 
+  const handleSubmit = () => {
+    if (!checked) {
+      alert("Please Agree to terms and conditions");
+    } else {
+      addEntrires();
+    }
+  };
+
   return (
     <Wrapper>
-      <ul>
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="/">About Us</a>
-        </li>
-        <li>
-          <a href="/">Financials and Policies</a>
-        </li>
-        <li>Terms of Use</li>
-      </ul>
-      <SocailWrapper></SocailWrapper>
       <TitleWrapper>
         <p className="title">Terms of Use</p>
         <p className="update">Last updated November 1, 2022</p>
@@ -95,6 +90,9 @@ const Terms = () => {
             to time.
           </Paragraph>
           <FormContainer>
+            <h2>
+              All the information should be same as charity navigator.
+            </h2>
             <FormTitle>EIN of charity</FormTitle>
             <InputWrapper>
               <Input
@@ -104,9 +102,7 @@ const Terms = () => {
                 value={charityEntry.einNumber}
                 onChange={handleChange}
               />
-            </InputWrapper>
-            <FormTitle>Fundraiser Head Information</FormTitle>
-            <InputWrapper>
+              <FormTitle>Fundraiser Head Information</FormTitle>
               <Input
                 type="text"
                 name="fullName"
@@ -122,20 +118,29 @@ const Terms = () => {
                 placeholder="Title"
               />
               <Input
-                type="text"
+                type="email"
                 name="email"
                 value={charityEntry.email}
                 onChange={handleChange}
                 placeholder="Email Address"
               />
+              <Input
+                type="text"
+                name="phone"
+                value={charityEntry.phone}
+                onChange={handleChange}
+                placeholder="Phone no."
+              />
             </InputWrapper>
             <div style={{ marginTop: "20px" }}>
-              <input type="checkbox" name="agreeTerms" />
+              <input
+                type="checkbox"
+                name="agreeTerms"
+                onClick={() => setchecked(!checked)}
+              />
               <label> I agree and accept Terms</label>
             </div>
-            <SubmitButton onClick={() => addEntrires()}>
-              Accept Terms
-            </SubmitButton>
+            <SubmitButton onClick={handleSubmit}>Accept Terms</SubmitButton>
           </FormContainer>
         </div>
       </TextContainer>

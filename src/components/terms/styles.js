@@ -2,38 +2,9 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   width: 100%;
-  ul {
-    display: flex;
-    justify-content: flex-start;
-    gap: 10px;
-    list-style-type: none;
-    margin: 40px 0 0 20px;
-    @media only screen and (max-width: 1000px) {
-      display: none;
-    }
-  }
-
-  li,
-  a {
-    color: black;
-    font-size: 22px;
-    font-weight: 500;
-  }
-
-  a {
-    text-decoration: underline;
-  }
-
-  li:not(:last-child)::after {
-    content: "/";
-    margin-left: 12px;
-    color: #858585;
-    text-decoration: none;
-  }
 `;
 
 export const TitleWrapper = styled.div`
-  /* width: 100%; */
   padding-top: 40px;
   p {
     text-align: center;
@@ -47,7 +18,7 @@ export const TitleWrapper = styled.div`
     font-weight: 500;
     margin-top: 8px;
   }
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 800px) {
     .title {
       font-size: 35px;
     }
@@ -71,7 +42,7 @@ export const TextContainer = styled.div`
     justify-content: center;
     align-items: center;
   }
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 800px) {
     .text-wrapper {
       padding: 20px 30px;
     }
@@ -88,11 +59,6 @@ export const Paragraph = styled.p`
   }
 `;
 
-export const SocailWrapper = styled.div`
-  background-color: #858585;
-  width: 120px;
-`;
-
 export const SubmitButton = styled.button`
   border: 0;
   outline: 0;
@@ -105,34 +71,6 @@ export const SubmitButton = styled.button`
   border-radius: 10px;
   margin-top: 20px;
   cursor: pointer;
-`;
-
-export const Input = styled.input`
-  border: 2px solid #e6e6e6;
-  outline: 0;
-  background: #fff;
-  padding: 12px 20px;
-  border-radius: 12px;
-  font-family: inherit;
-  font-size: 18px;
-  width: inherit;
-  &:focus {
-    border: 2px solid #4870fe;
-  }
-`;
-
-export const InputWrapper = styled.div`
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(2, auto);
-  width: 100%;
-  > :last-child {
-    grid-column: 1 / -1;
-  }
-  @media only screen and (max-width: 1000px) {
-    width: 90%;
-    grid-template-columns: repeat(1, auto);
-  }
 `;
 
 export const FormContainer = styled.div`
@@ -151,11 +89,37 @@ export const FormContainer = styled.div`
 `;
 
 export const FormTitle = styled.h3`
-  text-align: center;
+  text-align: start;
   color: #001936;
   font-size: 22px;
   margin: 20px 0;
   @media screen and (max-width: 450px) {
     font-size: 18px;
+  }
+`;
+
+export const Input = styled.input`
+  border: 2px solid #e6e6e6;
+  outline: 0;
+  background: #fff;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 18px;
+  &:focus {
+    border: 2px solid #4870fe;
+  }
+`;
+
+export const InputWrapper = styled.div`
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, auto);
+  > :first-child, :nth-child(2) {
+    grid-column: 1 / -1;
+  }
+  @media only screen and (max-width: 680px) {
+    width: 90%;
+    grid-template-columns: repeat(1, auto);
   }
 `;

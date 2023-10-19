@@ -6,52 +6,15 @@ export const FooterWrapper = styled.div`
   @media only screen and (max-width: 400px) {
     padding: 32px 50px 50px;
   }
-
-  .logo {
-    width: 50%;
-    padding-bottom: 60px;
-    padding-top: 40px;
-  }
-
-  .star,
-  .seal {
-    width: 120px;
-  }
-
-  .bbb {
-    width: 62px;
-    padding-left: 32px;
-  }
-
-  .threeimg img {
-    padding-top: 70px;
-  }
-
-  .secondpair p {
-    font-size: 20px;
-    font-weight: 500;
-  }
-
-  .interpair {
-    display: flex;
-    gap: 20px;
-    padding-top: 43px;
-    flex-wrap: wrap;
-  }
-
-  .icon {
-    display: flex;
-    gap: 30px;
-  }
-
-  .icon img {
-    height: 28px;
-    padding: 50px 0;
-  }
-
   .copyright {
     color: white;
-    font-size: 16px;
+    margin-top: 12px;
+    font-size: 19px;
+  }
+  .secondpair {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
   @media only screen and (max-width: 500px) {
     .interpair {
@@ -64,8 +27,9 @@ export const FooterContainer = styled.div`
   display: flex;
   justify-content: center;
   gap: 150px;
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 800px) {
     flex-direction: column;
+    gap: 30px;
   }
 `;
 

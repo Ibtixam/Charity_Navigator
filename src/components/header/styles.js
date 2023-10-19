@@ -1,39 +1,4 @@
-import styled from "styled-components";
-
-export const HeaderWrapper = styled.div`
-  width: 100%;
-`;
-
-export const Header = styled.div`
-  background: #001936;
-  width: 100%;
-  height: 65px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  @media only screen and (max-width: 1000px) {
-    display: none;
-  }
-`;
-
-export const Text = styled.p`
-  font-size: 18px;
-  font-weight: 600;
-  color: #fff;
-  margin: 15px 30px 15px 0;
-`;
-
-export const SvgWrapper = styled.div`
-  background-color: #355ffe;
-  border-radius: 100px;
-  width: 45px;
-  height: 45px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 25px;
-  cursor: pointer;
-`;
+import styled, { css } from "styled-components";
 
 export const Navbar = styled.div`
   display: flex;
@@ -51,55 +16,76 @@ export const Navbar = styled.div`
   }
 `;
 
-export const SiteName = styled.h2`
+export const SiteName = styled.h1`
   color: #001936;
   margin-left: 12px;
-`;
-
-export const InputWrapper = styled.div`
-  width: 34%;
-  border: 1px solid #9ba3c0;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  input {
-    border: 0;
-    font-size: 1.1rem;
-    color: #49516f;
-    outline: 0;
-    width: 100%;
-    margin-left: 15px;
-    font-family: "Poppins";
-  }
-  svg {
-    color: white;
-    width: 22px;
-  }
-  @media only screen and (max-width: 1000px) {
-    display: none;
-  }
-`;
-
-export const SearchButton = styled.div`
-  width: 38px;
-  padding: 14px 9px;
-  text-align: center;
-  background-color: #234ae0;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
 `;
 
 export const LinkWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 30%;
-  @media only screen and (max-width: 1000px) {
+  width: 40%;
+  @media only screen and (max-width: 800px) {
     display: none;
   }
   a {
     color: #001936;
     font-size: 18px;
+  }
+`;
+
+export const Menu = styled.div`
+  cursor: pointer;
+  margin-right: 12px;
+  padding: 15px;
+  border-radius: 50%;
+  @media only screen and (min-width: 800px) {
+    display: none;
+  }
+  &:hover {
+    background: rgba(139, 139, 139, 0.4);
+  }
+`;
+
+export const Menuline = styled.div`
+  background: #001936;
+  width: 24px;
+  height: 3px;
+  border-radius: 5px;
+  margin-bottom: 4px;
+`;
+
+export const Hamburger = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #001936;
+  width: 100%;
+  height: 210px;
+  position: absolute;
+  top: 82px;
+  transition: height .2s;
+  ${({ active }) =>
+    active &&
+    css`
+      height: 0;
+      .menu-items {
+        display: none !important;
+      }
+    `}
+  .menu-items {
+    color: #fff;
+    display: block;
+    text-align: center;
+    font-size: 22px;
+    margin: 20px 0;
+  }
+  @media only screen and (min-width: 800px) {
+    display: none;
+    .menu-items {
+      display: none;
+    }
   }
 `;
