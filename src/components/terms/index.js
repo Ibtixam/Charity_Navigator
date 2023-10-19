@@ -9,6 +9,7 @@ import {
   Input,
   FormTitle,
   FormContainer,
+  MainTitle,
 } from "./styles";
 import { SharedAPI } from "../../lib/shared.api";
 
@@ -90,9 +91,9 @@ const Terms = () => {
             to time.
           </Paragraph>
           <FormContainer>
-            <h2>
+            <MainTitle>
               All the information should be same as charity navigator.
-            </h2>
+            </MainTitle>
             <FormTitle>EIN of charity</FormTitle>
             <InputWrapper>
               <Input

@@ -43,9 +43,6 @@ export const Menu = styled.div`
   @media only screen and (min-width: 800px) {
     display: none;
   }
-  &:hover {
-    background: rgba(139, 139, 139, 0.4);
-  }
 `;
 
 export const Menuline = styled.div`
@@ -66,7 +63,7 @@ export const Hamburger = styled.div`
   height: 210px;
   position: absolute;
   top: 82px;
-  transition: height .2s;
+  transition: height 0.2s;
   ${({ active }) =>
     active &&
     css`
@@ -88,4 +85,12 @@ export const Hamburger = styled.div`
       display: none;
     }
   }
+`;
+
+export const MenuItems = styled.div`
+  color: #fff;
+  display: block;
+  text-align: center;
+  font-size: 22px;
+  margin: 20px 0;
 `;

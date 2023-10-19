@@ -98,6 +98,14 @@ export const FormTitle = styled.h3`
   }
 `;
 
+export const MainTitle = styled.p`
+  font-size: 20px;
+  font-weight: 400;
+  @media only screen and (max-width: 400px) {
+    font-size: 16px;
+  }
+`;
+
 export const Input = styled.input`
   border: 2px solid #e6e6e6;
   outline: 0;
@@ -109,13 +117,17 @@ export const Input = styled.input`
   &:focus {
     border: 2px solid #4870fe;
   }
+  @media only screen and (max-width: 680px) {
+    width: 90%;
+  }
 `;
 
 export const InputWrapper = styled.div`
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(2, auto);
-  > :first-child, :nth-child(2) {
+  > :first-child,
+  :nth-child(2) {
     grid-column: 1 / -1;
   }
   @media only screen and (max-width: 680px) {

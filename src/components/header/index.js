@@ -7,6 +7,7 @@ import {
   Menuline,
   Menu,
   Hamburger,
+  MenuItems,
 } from "./styles";
 import { NavLink } from "react-router-dom";
 
@@ -18,24 +19,46 @@ const header = () => {
   for (let index = 0; index < 3; index++) {
     MenuLine.push(<Menuline key={index} />);
   }
+
+  const MENU_ITEMS = [
+    {
+      name: "Home",
+      url: "/",
+    },
+    {
+      name: "Discover Charities",
+      url: "/entries",
+    },
+    {
+      name: "About Us",
+      url: "",
+    },
+  ];
+  
   return (
     <Navbar>
       <NavLink to="/">
         <SiteName>TGCC</SiteName>
       </NavLink>
       <Hamburger active={!open}>
-        <NavLink className="menu-items" to="/">
-          Home
-        </NavLink>
-        <NavLink className="menu-items" to="/entries">
-          Discover Charities
-        </NavLink>
-        <NavLink className="menu-items">About Us</NavLink>
+        {MENU_ITEMS.map((item, index) => {
+          const { name, url } = item;
+          return (
+            <NavLink to={url} key={index} onClick={() => setOpen(false)}>
+              <MenuItems className="menu-items">{name}</MenuItems>
+            </NavLink>
+          );
+        })}
       </Hamburger>
       <LinkWrapper>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/entries">Discover Charities</NavLink>
-        <NavLink>About Us</NavLink>
+        {MENU_ITEMS.map((item, index) => {
+          const { name, url } = item;
+          return (
+            <NavLink key={index} to={url}>
+              {name}
+            </NavLink>
+          );
+        })}
       </LinkWrapper>
       <Menu onClick={() => setOpen(!open)}>{MenuLine}</Menu>
     </Navbar>
