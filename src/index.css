@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+html {
+  zoom: 90%;
+}
+
 body {
   font-family: Poppins, sans-serif;
 }

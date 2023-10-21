@@ -2,24 +2,9 @@ import styled from "styled-components";
 
 export const FooterWrapper = styled.div`
   background-color: #001936;
-  padding: 32px 63px 100px;
+  padding: 10px 50px 10px;
   @media only screen and (max-width: 400px) {
-    padding: 32px 50px 50px;
-  }
-  .copyright {
-    color: white;
-    margin-top: 12px;
-    font-size: 19px;
-  }
-  .secondpair {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  @media only screen and (max-width: 500px) {
-    .interpair {
-      gap: 0;
-    }
+    padding: 10px 50px 10px;
   }
 `;
 
@@ -33,69 +18,11 @@ export const FooterContainer = styled.div`
   }
 `;
 
-export const FooterText = styled.div`
-  font-size: 20px;
-  padding-top: 24px;
-  color: white;
-`;
-
-export const Input = styled.input`
-  border: 2px solid transparent;
-  outline: 0;
-  background: #fff;
-  padding: 12px 20px;
-  border-radius: 12px;
-  font-family: inherit;
-  font-size: 18px;
-  width: inherit;
-  &:focus {
-    border: 2px solid #4870fe;
-  }
-`;
-
-export const SubmitButton = styled.button`
-  border: 0;
-  outline: 0;
-  width: 40%;
-  background: #355ffe;
-  color: #fff;
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 20px;
-  padding: 12px 20px;
-  border-radius: 10px;
-  margin-top: 20px;
-  opacity: 0.7;
-  cursor: pointer;
-  &:hover {
-    opacity: 0.5;
-  }
-  @media only screen and (max-width: 400px) {
-    width: 60%;
-    font-size: 18px;
-  }
-`;
-
-export const InputWrapper = styled.div`
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(2, auto);
-  > :last-child {
-    grid-column: 1 / -1; /* Span from first to last column */
-  }
-  @media only screen and (max-width: 1000px) {
-    grid-template-rows: repeat(1, max);
-    grid-template-columns: repeat(2, auto);
-    grid-template-columns: none;
-    width: 90%;
-  }
-`;
-
 export const SiteName = styled.h2`
   color: #fff;
-  font-size: 60px;
+  font-size: 50px;
   margin-top: 20px;
   @media screen and (max-width: 480px) {
-    font-size: 45px;
+    font-size: 40px;
   }
 `;
