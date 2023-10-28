@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   Navbar,
   LinkWrapper,
@@ -13,6 +13,20 @@ import { NavLink } from "react-router-dom";
 
 const header = () => {
   const [open, setOpen] = useState(false);
+  const Items = useRef(null);
+
+  useEffect(() => {
+    const handleHamburger = (e) => {
+      if (!Items.current.contains(e.target)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("click", handleHamburger);
+
+    return () => {
+      document.removeEventListener("click", handleHamburger);
+    };
+  }, []);
 
   const MenuLine = [];
 
@@ -34,7 +48,7 @@ const header = () => {
       url: "",
     },
   ];
-  
+
   return (
     <Navbar>
       <NavLink to="/">
@@ -60,7 +74,9 @@ const header = () => {
           );
         })}
       </LinkWrapper>
-      <Menu onClick={() => setOpen(!open)}>{MenuLine}</Menu>
+      <Menu onClick={() => setOpen(!open)} ref={Items}>
+        {MenuLine}
+      </Menu>
     </Navbar>
   );
 };

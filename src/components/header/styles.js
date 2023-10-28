@@ -18,7 +18,7 @@ export const Navbar = styled.div`
 
 export const SiteName = styled.h1`
   color: #001936;
-  margin-left: 12px;
+  margin-left: 16px;
 `;
 
 export const LinkWrapper = styled.div`
@@ -47,8 +47,8 @@ export const Menu = styled.div`
 
 export const Menuline = styled.div`
   background: #001936;
-  width: 24px;
-  height: 3px;
+  width: 30px;
+  height: 4px;
   border-radius: 5px;
   margin-bottom: 4px;
 `;
@@ -62,8 +62,9 @@ export const Hamburger = styled.div`
   width: 100%;
   height: 210px;
   position: absolute;
-  top: 82px;
+  top: 80px;
   transition: height 0.2s;
+
   ${({ active }) =>
     active &&
     css`
@@ -87,7 +88,7 @@ export const Hamburger = styled.div`
   }
 `;
 
-export const MenuItems = styled.div`
+export const MenuItems = styled.p`
   color: #fff;
   display: block;
   text-align: center;
