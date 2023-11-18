@@ -73,7 +73,7 @@ export const SubmitButton = styled.button`
   cursor: pointer;
 `;
 
-export const FormContainer = styled.div`
+export const FormContainer = styled.form`
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -126,12 +126,12 @@ export const InputWrapper = styled.div`
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(2, auto);
+  width: 100%;
   > :first-child,
   :nth-child(2) {
     grid-column: 1 / -1;
   }
   @media only screen and (max-width: 680px) {
-    width: 90%;
     grid-template-columns: repeat(1, auto);
   }
 `;

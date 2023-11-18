@@ -137,9 +137,10 @@ const Terms = () => {
               <input
                 type="checkbox"
                 name="agreeTerms"
+                id="agreeTerms"
                 onClick={() => setchecked(!checked)}
               />
-              <label> I agree and accept Terms</label>
+              <label htmlFor="agreeTerms"> I agree and accept Terms</label>
             </div>
             <SubmitButton onClick={handleSubmit}>Accept Terms</SubmitButton>
           </FormContainer>
