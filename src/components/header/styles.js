@@ -65,8 +65,8 @@ export const Hamburger = styled.div`
   top: 80px;
   transition: height 0.2s;
 
-  ${({ active }) =>
-    active &&
+  ${({ $active }) =>
+    $active &&
     css`
       height: 0;
       .menu-items {

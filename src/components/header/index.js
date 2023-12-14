@@ -54,7 +54,7 @@ const header = () => {
       <NavLink to="/">
         <SiteName>TGCC</SiteName>
       </NavLink>
-      <Hamburger active={!open}>
+      <Hamburger $active={!open}>
         {MENU_ITEMS.map((item, index) => {
           const { name, url } = item;
           return (
