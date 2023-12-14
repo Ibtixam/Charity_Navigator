@@ -17,8 +17,8 @@ const Terms = () => {
   const [charityEntry, setCharityEntry] = useState({});
   const [checked, setchecked] = useState(false);
 
-  const handleChange = (e) => {
-    const { value, name } = e.target;
+  const handleChange = ({ target }) => {
+    const { value, name } = target;
     setCharityEntry((prev) => {
       return { ...prev, [name]: value };
     });
