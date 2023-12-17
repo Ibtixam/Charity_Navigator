@@ -25,7 +25,9 @@ export const LinkWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 40%;
+  /* width: 40%; */
+  gap: 60px;
+  margin-right: 12px;
   @media only screen and (max-width: 800px) {
     display: none;
   }
