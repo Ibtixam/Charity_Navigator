@@ -36,7 +36,7 @@ export const TextContainer = styled.div`
   align-items: center;
   margin-top: 40px;
   .text-wrapper {
-    padding: 60px 150px;
+    padding: 60px 90px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -116,9 +116,6 @@ export const Input = styled.input`
   font-size: 18px;
   &:focus {
     border: 2px solid #4870fe;
-  }
-  @media only screen and (max-width: 680px) {
-    width: 90%;
   }
 `;
 
