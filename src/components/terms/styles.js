@@ -44,7 +44,7 @@ export const TextContainer = styled.div`
   }
   @media only screen and (max-width: 800px) {
     .text-wrapper {
-      padding: 20px 30px;
+      padding: 20px;
     }
   }
 `;
