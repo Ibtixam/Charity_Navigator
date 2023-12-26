@@ -114,6 +114,7 @@ export const Input = styled.input`
   border-radius: 12px;
   font-family: inherit;
   font-size: 18px;
+  width: calc(100% - 40px);
   &:focus {
     border: 2px solid #4870fe;
   }
